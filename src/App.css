@@ -230,14 +230,26 @@ input:focus {
 .label {
   display: flex;
   min-width: 40rem;
-  padding: 1rem 1.2rem;
-  font-size: 1.8rem;
-  line-height: 1.42857143;
-  color: rgb(58, 57, 57);
-  background-color: #fff;
-  border: 0.1rem solid #ccc;
   border-radius: 0.4rem;
   justify-content: space-between;
+  /* height: 3.4rem; */
+  padding: 1rem 1.2rem 0rem 1.2rem;
+  font-size: 1.8rem;
+  line-height: 1.42857143;
+  margin-top: 2rem;
+  color: rgb(58, 57, 57);
+  background-color: #fff;
+  background-image: none;
+  border: 0.1rem solid #ccc;
+  border-radius: 0.4rem;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+.deletedDiv {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .deletedContent {
@@ -285,5 +297,37 @@ input:focus {
   }
   100% {
     transform: scaleY(100);
+  }
+}
+
+.itemsDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+@media only screen and (max-width: 480px) {
+  input {
+    min-width: 0;
+    width: 95%;
+  }
+  .eachItem {
+    min-width: 0;
+    width: 90%;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .deletedDiv {
+    width: 100vw;
+    padding: 0 1rem 0 1rem;
+  }
+  .label {
+    min-width: 0;
+    width: 95%;
+  }
+  .deletedContent {
+    min-width: 0;
+    width: 95%;
   }
 }

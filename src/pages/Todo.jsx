@@ -8,7 +8,6 @@ const getLocalItems = () => {
 
 const getLocalDeletedItems = () => {
   const list = localStorage.getItem("deleted-list");
-  console.log("deletedList", list);
 
   return list ? JSON.parse(list) : [];
 };
@@ -113,7 +112,7 @@ const Todo = () => {
             )}
           </div>
 
-          <div className="showItems">
+          <div className="showItems itemsDiv">
             {items.map((elem) => {
               return (
                 <div className="eachItem" key={elem.id}>
@@ -147,7 +146,7 @@ const Todo = () => {
           </div>
 
           {/* Deleted Items Accordion */}
-          <div className="showItems deletedDiv">
+          <div className=" deletedDiv">
             <div className="label" onClick={() => setIsVisible(!isVisible)}>
               <p>Deleted Items</p>
               <p>
